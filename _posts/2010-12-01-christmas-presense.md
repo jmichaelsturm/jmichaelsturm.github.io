@@ -1,5 +1,5 @@
 ---
-title: "Post: Christmas Presence"
+title: "Christmas Presence"
 categories:
   - Blog
 tags:
@@ -8,9 +8,7 @@ tags:
   - Christianity
 ---
 
-## The Cheetah
-
-One of my fondest childhood memories of Christmas has to be The Cheetah.  No, I am not talking
+One of my fondest childhood memories of Christmas has to be _The Cheetah_.  No, I am not talking
 about the fastest of all land mammals.  For those of you who were not a young boy in the early
 1970's, the cheetah was the pinnacle of ride-on toys.  This was no wimpy "Big Wheel" - its name
 promised a more exhilarating experience.  I imagined that with this vehicle, I could zoom down
