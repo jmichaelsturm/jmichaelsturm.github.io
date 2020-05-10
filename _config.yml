@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Mike Sturm"
   avatar : "/assets/images/mike-family.jpg"
-  bio    : "Husband, father, firmware engineer, and multi-dimensional _**geek**_ from Edmond, Oklahoma."
+  bio    : "Husband, father, firmware engineer, and all around _**geek**_ from Edmond, Oklahoma."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
