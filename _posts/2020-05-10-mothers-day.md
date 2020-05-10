@@ -16,13 +16,13 @@ of course this statement is true!
 As a certified astronomy geek and ~~slightly~~ very obsessive family trip planner, I could not
 wait to drive hundreds of miles to witness
 [The Great American Eclipse of 2017](https://en.wikipedia.org/wiki/Solar_eclipse_of_August_21,_2017).
-I considered this to be a _once-in-a-lifetime_ opportity to see a total solar eclipse, even though
+I considered this to be a _once-in-a-lifetime_ opportunity to see a total solar eclipse, even though
 I knew there will be another ***(even better)*** total solar eclipse in April 2024,
 [The *Greater* American Eclipse of 2024](https://en.wikipedia.org/wiki/Solar_eclipse_of_April_8,_2024).
 
-I was disappointed my wife, Cindy, and eldest son, Jacob, could not join us on the trip because
-it was on the first day of their classes, but I was thrilled that I would get to share this exciting
-time with my Mom, my daughter Katie, and my youngest son, Luke.
+I was disappointed that my Dad (who was in a nursing home), as well as my wife Cindy and eldest son
+Jacob (both of whom were in class), could not join us on the trip, but I was thrilled that I
+would get to share this exciting time with my Mom, my daughter Katie, and my youngest son, Luke.
 
 ## Oklahoma City to Potosi, Missouri
 
