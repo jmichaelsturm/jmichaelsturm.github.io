@@ -16,4 +16,10 @@ var store = [{
         "tags": ["Family","Dad","God","Christianity"],
         "url": "http://localhost:4000/blog/tribute-to-dad/",
         "teaser": null
+      },{
+        "title": "Nobody eclipses my Mom!",
+        "excerpt":"Happy Mother’s Day! I apologize for the cheesy pun in this blog post title, but bear with me as I recall a very special trip spent with my wonderful Mom and two of my children. And… of course this statement is true! As a certified astronomy geek and slightly very...","categories": ["Blog"],
+        "tags": ["Astronomy","Eclipse","Family","Mom"],
+        "url": "http://localhost:4000/blog/mothers-day/",
+        "teaser": null
       }]
