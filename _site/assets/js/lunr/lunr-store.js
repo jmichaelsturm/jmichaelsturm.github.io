@@ -12,7 +12,7 @@ var store = [{
         "teaser": null
       },{
         "title": "A Tribute to My Dad",
-        "excerpt":"My Dad, Gene Paul Sturm, Jr., of Bartlesville, OK passed away on March 2, 2020 after years of struggle against Alzheimer’s Disease. Below is my tribute to my father, friend, and mentor. I will never forget him and his tremendous, positive impact on my life. In the book of Matthew,...","categories": ["Blog"],
+        "excerpt":"My Dad, Gene Paul Sturm, Jr., of Bartlesville, OK passed away on March 2, 2020 after years of struggle against Alzheimer’s Disease. Below is a tribute to my father, friend, and mentor. I will never forget him and his tremendous, positive impact on my life. In the book of Matthew,...","categories": ["Blog"],
         "tags": ["Family","Dad","God","Christianity"],
         "url": "http://localhost:4000/blog/tribute-to-dad/",
         "teaser": null
