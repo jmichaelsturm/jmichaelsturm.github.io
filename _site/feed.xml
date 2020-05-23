@@ -1,4 +1,243 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-10T13:32:13-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mike’s Musings</title><subtitle>Personal website for Mike Sturm, a firmware engineer from Edmond, Oklahoma.</subtitle><author><name>Mike Sturm</name></author><entry><title type="html">Nobody eclipses my Mom!</title><link href="http://localhost:4000/blog/mothers-day/" rel="alternate" type="text/html" title="Nobody eclipses my Mom!" /><published>2020-05-10T00:00:00-05:00</published><updated>2020-05-10T00:00:00-05:00</updated><id>http://localhost:4000/blog/mothers-day</id><content type="html" xml:base="http://localhost:4000/blog/mothers-day/">&lt;p&gt;Happy Mother’s Day! I apologize for the cheesy pun in this blog post title, but bear with me
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-23T17:20:28-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mike’s Musings</title><subtitle>Personal website for Mike Sturm, a firmware engineer from Edmond, Oklahoma.</subtitle><author><name>Mike Sturm</name></author><entry><title type="html">Raspberry Pi Aquarium Monitor</title><link href="http://localhost:4000/blog/pi-aquarium-monitor/" rel="alternate" type="text/html" title="Raspberry Pi Aquarium Monitor" /><published>2020-05-22T00:00:00-05:00</published><updated>2020-05-22T00:00:00-05:00</updated><id>http://localhost:4000/blog/pi-aquarium-monitor</id><content type="html" xml:base="http://localhost:4000/blog/pi-aquarium-monitor/">&lt;p&gt;Before we get started, I can anticipate many of your questions about this blog post already.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Why do you have a typo in your blog title?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“What does a delicious fruit dessert have to do with aquariums?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you don’t have a computer geek in your life, you may not realize that a &lt;strong&gt;raspberry pie&lt;/strong&gt; is
+quite different from a &lt;strong&gt;Raspberry Pi&lt;/strong&gt;.  The latter is a low-cost, single-board computer
+created by the &lt;a href=&quot;https://www.raspberrypi.org/about/&quot;&gt;Raspberry Pi Foundation&lt;/a&gt;, a non-profit
+organization based in the UK that brings the power of computing to students and hobbyists
+around the world. The “Pi” in the title not only suggests the pi symbol from mathematics but also
+the &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; computer programming language. &lt;em&gt;Hint: I am a fan of both!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I fell in love with the &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt; for projects because it
+reminded me of the early days of personal computing when my brother and I spent countless hours
+tinkering around and learning how to program using our
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Apple_II_Plus&quot;&gt;Bell &amp;amp; Howell Apple II+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;social-fish-tancing&quot;&gt;Social “Fish-tancing…”&lt;/h2&gt;
+
+&lt;p&gt;Around Christmas, my son Jacob, who is studying journalism at Oklahoma State University in
+Stillwater, purchased a 20-gallon aquarium and stocked it with several freshwater fish.
+Establishing a new aquarium can be a painful process, and he lost several fish during the first
+few weeks until the beneficial bacteria started breaking down the waste. By the beginning
+of March the aquarium had reached a “stable” state – right in time for his planned trip back home
+to visit us during Spring Break.&lt;/p&gt;
+
+&lt;p&gt;That is when the world changed. What started out as a week-long visit to Edmond turned into weeks of
+quarantine due to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Coronavirus_disease_2019&quot;&gt;COVID-19 pandemic&lt;/a&gt;.
+Bringing the aquarium to our house was out of the question, as the move would likely disrupt the
+careful balance he worked so hard to establish. Traveling back and forth to Stillwater to care for
+the fish was possible but impractical. This dilemma required a creative solution to allow him to
+keep an eye on his tank while he was home with us in lockdown.&lt;/p&gt;
+
+&lt;h2 id=&quot;cue-the-raspberry-pi&quot;&gt;Cue the Raspberry Pi…&lt;/h2&gt;
+
+&lt;p&gt;The Raspberry Pi is one of those devices that you &lt;strong&gt;know&lt;/strong&gt; you want, but you may not have a
+concrete &lt;strong&gt;reason&lt;/strong&gt; to buy. Sure, its purchase can be justified for educational and entertainment
+uses, but can it do &lt;strong&gt;useful&lt;/strong&gt; things?  Yes! Faced with the aquarium dilemma, I quickly knew how
+my Raspberry Pi Zero W would be put to use for the next several weeks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/pizerow.jpg&quot; alt=&quot;Raspberry Pi Zero W&quot; /&gt;
+&lt;strong&gt;Raspberry Pi Zero W&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For the aquarium monitor project, I used off-the-shelf components that are available for purchase
+through &lt;a href=&quot;https://www.amazon.com/&quot;&gt;Amazon&lt;/a&gt;, &lt;a href=&quot;https://www.adafruit.com/&quot;&gt;AdaFruit&lt;/a&gt;, or other
+Raspberry Pi vendors.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-zero-w/&quot;&gt;Raspberry Pi Zero W&lt;/a&gt;
+single-board computer is the centerpiece of the aquarium monitor. Although it sells by
+itself for only USD $10, it requires some additional components such as a power supply
+and micro SD card to store the operating system. For my project I used the
+&lt;a href=&quot;https://www.amazon.com/Vilros-Raspberry-Starter-Power-Premium/dp/B0748MPQT4/&quot;&gt;Viros Raspberry Pi Zero W Kit&lt;/a&gt;
+($29) along with a
+&lt;a href=&quot;https://www.amazon.com/gp/product/B012PLSCQ0&quot;&gt;Lexar 633x 32GB micro SD card&lt;/a&gt; ($6).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Recording images and videos of the fish requires a camera module, and for this project I used the
+&lt;a href=&quot;https://www.raspberrypi.org/products/camera-module-v2/&quot;&gt;Raspberry Pi Camera Module v2&lt;/a&gt;,
+which sells for $28 on
+&lt;a href=&quot;https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS&quot;&gt;Amazon&lt;/a&gt;.
+The camera is connected via a ribbon cable to the Pi Zero W and fits nicely in the Vilros camera
+case included in the kit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We purchased an inexpensive, timer-based &lt;a href=&quot;https://www.amazon.com/gp/product/B07VCKRFGY/&quot;&gt;fish feeder&lt;/a&gt;
+which automatically dispenses flaked fish food twice per day at 10AM and 6PM.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The aquarium light is connected to a &lt;a href=&quot;https://www.wemo.com/&quot;&gt;WeMo&lt;/a&gt; smart plug, and it is
+programmed to turn on at 10AM and off at 8PM daily.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Pi is mounted to one of my spare tripods so that the entire aquarium is visible in the
+camera’s field of view.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;software-runs-the-show&quot;&gt;Software runs the show…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Pi Zero W runs an optimized version of the free and open source
+&lt;a href=&quot;https://en.m.wikipedia.org/wiki/Linux&quot;&gt;Linux&lt;/a&gt; operating system called
+&lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Raspbian&lt;/a&gt;. Raspbian is similar to Windows and
+MacOS in that it can run programs and handles interfacing to the computer hardware.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/raspbian-desktop.png&quot; alt=&quot;Raspbian Desktop&quot; /&gt;
+&lt;strong&gt;Raspbian Desktop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;I needed to be able to access the Raspberry Pi from our house over the internet in order to make
+adjustments to the camera settings and video schedule from our house. To do this, I used the
+Real VNC server (included with Raspbian) running on the remote Raspberry Pi and the
+&lt;a href=&quot;https://www.realvnc.com/en/connect/download/viewer/&quot;&gt;Real VNC Viewer&lt;/a&gt; on our home computer
+to remotely control the Raspberry Pi over the internet.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I wrote a simple &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;bash&lt;/a&gt; shell script which
+invokes the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raspivid&lt;/code&gt; program to capture a couple of minutes of video and send it to another Pi
+at our house using the &lt;a href=&quot;https://en.m.wikipedia.org/wiki/SSH_File_Transfer_Protocol&quot;&gt;SFTP&lt;/a&gt; protocol.
+The bash script is invoked every hour, on the hour, between 10AM and 7PM when the aquarium
+light is on.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Our home Raspberry Pi receives the video each hour and, after the 7PM video arrives, another
+bash script on that device combines all of the daily videos into one video which is ready to watch
+at our leisure.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;putting-it-all-together&quot;&gt;Putting it all together…&lt;/h2&gt;
+
+&lt;p&gt;After a few iterations of tweaking the bash scripts and adjusting the positioning of the camera,
+we were very pleased with the end result. We are able to check-in on the daily activities of the
+fish to make sure they are healthy, the water level is correct, and the food is being dispensed
+properly.&lt;/p&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;https://youtu.be/IS_rwr9qUGo&quot;&gt;here&lt;/a&gt; to watch a recent video of the aquarium.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/pi-aquarium-monitor.jpg&quot; alt=&quot;Raspberry Pi Aquarium Monitor&quot; /&gt;
+&lt;strong&gt;Raspberry Pi Aquarium Monitor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/pi-camera.jpg&quot; alt=&quot;Raspberry Pi Camera&quot; /&gt;
+&lt;strong&gt;Close up of the Pi Camera&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;geeky-details&quot;&gt;Geeky Details&lt;/h2&gt;
+
+&lt;p&gt;If you have read this far and want more details, this section is for you. Otherwise, feel free
+to stop reading!&lt;/p&gt;
+
+&lt;h3 id=&quot;bash-script-on-the-remote-raspberry-pi&quot;&gt;Bash script on the remote Raspberry Pi&lt;/h3&gt;
+
+&lt;p&gt;I used the following bash script for the video recording on the remote Raspberry Pi.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aquarium-&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +%b-%d-%H-%M&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+raspivid &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; ~/Aquarium/&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;.h264 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; 120000 &lt;span class=&quot;nt&quot;&gt;-drc&lt;/span&gt; med &lt;span class=&quot;nt&quot;&gt;-ISO&lt;/span&gt; 160 &lt;span class=&quot;nt&quot;&gt;-fps&lt;/span&gt; 20 &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; 1036
+
+sftp pi@my-home-pi.my-dynamic-dns-provider.com&amp;lt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+lcd ~/Aquarium/
+cd /mnt/samba/Backups/Aquarium/
+#put &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;.mp4
+put &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;.h264
+quit
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; ~/Aquarium/&lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;.h264
+
+&lt;span class=&quot;nv&quot;&gt;SFTP_RETURN_CODE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# If the return code is non-zero then the upload was not successful&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SFTP_RETURN_CODE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;then
+   &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;upload failed&quot;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SFTP_RETURN_CODE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else
+   &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;upload successful&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raspivid -o ~/Aquarium/$filename.h264 -t 120000 -drc med -ISO 160 -fps 20 -a 1036&lt;/code&gt; command
+invokes the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raspivid&lt;/code&gt; program for 120000 milliseconds (2 minutes) and saves the output the
+specified file name. I am using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-fps 20&lt;/code&gt; to limit the frames per second to 20 (which I found was
+acceptable and reducd the file size).  The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-ISO 160&lt;/code&gt; was another tweak to prevent parts of the
+video from being overexposed. Finally, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a 1036&lt;/code&gt; is a way to add the time and date on the video.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sftp&lt;/code&gt; command shown does not have my &lt;strong&gt;actual&lt;/strong&gt; IP address. I have added the SSH public
+key for the remote Raspberry Pi to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.ssh/authorized_keys&lt;/code&gt; file on the home Raspberry Pi.
+That way the remote Pi can send the files without sending the password (since the SSH keys are
+used for authentication).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bash-script-on-the-home-raspberry-pi&quot;&gt;Bash script on the home Raspberry Pi&lt;/h3&gt;
+
+&lt;p&gt;The home Raspberry Pi is responsible for combining all of the recorded videos from the day into
+a single video which makes it easier to review.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/samba/Backups/Aquarium
+&lt;span class=&quot;nv&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aquarium-&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +%b-%d&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+MP4Box &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;aquarium&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;h264&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-cat&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt;.mp4
+&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.h264
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MP4Box&lt;/code&gt; program is used to combine all files from the day (which are named starting with
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aquarium&lt;/code&gt; and with the extension &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.h264&lt;/code&gt;) into a new file in MP4 format.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After processing the files, remove the hourly &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.h264&lt;/code&gt; videos.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cron-jobs&quot;&gt;cron jobs&lt;/h3&gt;
+
+&lt;p&gt;The bash scripts are invoked through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cron&lt;/code&gt; jobs which are created using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crontab -e&lt;/code&gt; command
+and using an editor to add scripts which will be invoked at certain times.  The important lines
+are shown here:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# m h  dom mon dow   command
+0 10 * * * /home/pi/Scripts/camera.sh
+0 11 * * * /home/pi/Scripts/camera-3min.sh
+0 12 * * * /home/pi/Scripts/camera.sh
+0 13 * * * /home/pi/Scripts/camera.sh
+0 14 * * * /home/pi/Scripts/camera.sh
+0 15 * * * /home/pi/Scripts/camera.sh
+0 16 * * * /home/pi/Scripts/camera.sh
+0 17 * * * /home/pi/Scripts/camera.sh
+0 18 * * * /home/pi/Scripts/camera-3min.sh
+0 19 * * * /home/pi/Scripts/camera.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;crontab settings for remote Raspberry Pi&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The time is specified using minutes (first number), hour (second number), day of the month, month
+number, and day of the week. An asterisk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; is used to indicate ‘any’.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In the example above, the script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;camera.sh&lt;/code&gt; is executed at 10AM, 12PM, 1PM, 2PM, 3PM, 4PM, 5PM,
+and 7PM, while the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;camera-3min.sh&lt;/code&gt; is invoked at 11AM and 6PM (which happens to be our feeding
+times).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mike Sturm</name></author><category term="Raspberry Pi" /><category term="Linux" /><category term="Family" /><summary type="html">Before we get started, I can anticipate many of your questions about this blog post already.</summary></entry><entry><title type="html">Nobody eclipses my Mom!</title><link href="http://localhost:4000/blog/mothers-day/" rel="alternate" type="text/html" title="Nobody eclipses my Mom!" /><published>2020-05-10T00:00:00-05:00</published><updated>2020-05-10T00:00:00-05:00</updated><id>http://localhost:4000/blog/mothers-day</id><content type="html" xml:base="http://localhost:4000/blog/mothers-day/">&lt;p&gt;Happy Mother’s Day! I apologize for the cheesy pun in this blog post title, but bear with me
 as I recall a very special trip spent with my wonderful Mom and two of my children. And…
 of course this statement is true!&lt;/p&gt;
 

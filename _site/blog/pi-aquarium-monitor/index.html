@@ -1,0 +1,825 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Raspberry Pi Aquarium Monitor - Mike’s Musings</title>
+<meta name="description" content="Before we get started, I can anticipate many of your questions about this blog post already.  ">
+
+
+  <meta name="author" content="Mike Sturm">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Mike's Musings">
+<meta property="og:title" content="Raspberry Pi Aquarium Monitor">
+<meta property="og:url" content="http://localhost:4000/blog/pi-aquarium-monitor/">
+
+
+  <meta property="og:description" content="Before we get started, I can anticipate many of your questions about this blog post already.  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-22T00:00:00-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/blog/pi-aquarium-monitor/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Mike's Musings Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Mike's Musings
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/posts/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/mike-family.jpg" alt="Mike Sturm" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Mike Sturm</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Husband, father, firmware engineer, and all around <em><strong>geek</strong></em> from Edmond, Oklahoma.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://jmichaelsturm.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Raspberry Pi Aquarium Monitor">
+    <meta itemprop="description" content="Before we get started, I can anticipate many of your questions about this blog post already.">
+    <meta itemprop="datePublished" content="2020-05-22T00:00:00-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Raspberry Pi Aquarium Monitor
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Before we get started, I can anticipate many of your questions about this blog post already.</p>
+
+<blockquote>
+  <p>“Why do you have a typo in your blog title?”</p>
+</blockquote>
+
+<blockquote>
+  <p>“What does a delicious fruit dessert have to do with aquariums?”</p>
+</blockquote>
+
+<p>If you don’t have a computer geek in your life, you may not realize that a <strong>raspberry pie</strong> is
+quite different from a <strong>Raspberry Pi</strong>.  The latter is a low-cost, single-board computer
+created by the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a>, a non-profit
+organization based in the UK that brings the power of computing to students and hobbyists
+around the world. The “Pi” in the title not only suggests the pi symbol from mathematics but also
+the <a href="https://www.python.org/">Python</a> computer programming language. <em>Hint: I am a fan of both!</em></p>
+
+<p>I fell in love with the <a href="https://www.raspberrypi.org/">Raspberry Pi</a> for projects because it
+reminded me of the early days of personal computing when my brother and I spent countless hours
+tinkering around and learning how to program using our
+<a href="https://en.wikipedia.org/wiki/Apple_II_Plus">Bell &amp; Howell Apple II+</a>.</p>
+
+<h2 id="social-fish-tancing">Social “Fish-tancing…”</h2>
+
+<p>Around Christmas, my son Jacob, who is studying journalism at Oklahoma State University in
+Stillwater, purchased a 20-gallon aquarium and stocked it with several freshwater fish.
+Establishing a new aquarium can be a painful process, and he lost several fish during the first
+few weeks until the beneficial bacteria started breaking down the waste. By the beginning
+of March the aquarium had reached a “stable” state – right in time for his planned trip back home
+to visit us during Spring Break.</p>
+
+<p>That is when the world changed. What started out as a week-long visit to Edmond turned into weeks of
+quarantine due to the <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019">COVID-19 pandemic</a>.
+Bringing the aquarium to our house was out of the question, as the move would likely disrupt the
+careful balance he worked so hard to establish. Traveling back and forth to Stillwater to care for
+the fish was possible but impractical. This dilemma required a creative solution to allow him to
+keep an eye on his tank while he was home with us in lockdown.</p>
+
+<h2 id="cue-the-raspberry-pi">Cue the Raspberry Pi…</h2>
+
+<p>The Raspberry Pi is one of those devices that you <strong>know</strong> you want, but you may not have a
+concrete <strong>reason</strong> to buy. Sure, its purchase can be justified for educational and entertainment
+uses, but can it do <strong>useful</strong> things?  Yes! Faced with the aquarium dilemma, I quickly knew how
+my Raspberry Pi Zero W would be put to use for the next several weeks.</p>
+
+<p><img src="/assets/images/pizerow.jpg" alt="Raspberry Pi Zero W" />
+<strong>Raspberry Pi Zero W</strong></p>
+
+<p>For the aquarium monitor project, I used off-the-shelf components that are available for purchase
+through <a href="https://www.amazon.com/">Amazon</a>, <a href="https://www.adafruit.com/">AdaFruit</a>, or other
+Raspberry Pi vendors.</p>
+
+<ul>
+  <li>
+    <p>A <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a>
+single-board computer is the centerpiece of the aquarium monitor. Although it sells by
+itself for only USD $10, it requires some additional components such as a power supply
+and micro SD card to store the operating system. For my project I used the
+<a href="https://www.amazon.com/Vilros-Raspberry-Starter-Power-Premium/dp/B0748MPQT4/">Viros Raspberry Pi Zero W Kit</a>
+($29) along with a
+<a href="https://www.amazon.com/gp/product/B012PLSCQ0">Lexar 633x 32GB micro SD card</a> ($6).</p>
+  </li>
+  <li>
+    <p>Recording images and videos of the fish requires a camera module, and for this project I used the
+<a href="https://www.raspberrypi.org/products/camera-module-v2/">Raspberry Pi Camera Module v2</a>,
+which sells for $28 on
+<a href="https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS">Amazon</a>.
+The camera is connected via a ribbon cable to the Pi Zero W and fits nicely in the Vilros camera
+case included in the kit.</p>
+  </li>
+  <li>
+    <p>We purchased an inexpensive, timer-based <a href="https://www.amazon.com/gp/product/B07VCKRFGY/">fish feeder</a>
+which automatically dispenses flaked fish food twice per day at 10AM and 6PM.</p>
+  </li>
+  <li>
+    <p>The aquarium light is connected to a <a href="https://www.wemo.com/">WeMo</a> smart plug, and it is
+programmed to turn on at 10AM and off at 8PM daily.</p>
+  </li>
+  <li>
+    <p>The Pi is mounted to one of my spare tripods so that the entire aquarium is visible in the
+camera’s field of view.</p>
+  </li>
+</ul>
+
+<h2 id="software-runs-the-show">Software runs the show…</h2>
+
+<ul>
+  <li>The Pi Zero W runs an optimized version of the free and open source
+<a href="https://en.m.wikipedia.org/wiki/Linux">Linux</a> operating system called
+<a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>. Raspbian is similar to Windows and
+MacOS in that it can run programs and handles interfacing to the computer hardware.</li>
+</ul>
+
+<p><img src="/assets/images/raspbian-desktop.png" alt="Raspbian Desktop" />
+<strong>Raspbian Desktop</strong></p>
+
+<ul>
+  <li>
+    <p>I needed to be able to access the Raspberry Pi from our house over the internet in order to make
+adjustments to the camera settings and video schedule from our house. To do this, I used the
+Real VNC server (included with Raspbian) running on the remote Raspberry Pi and the
+<a href="https://www.realvnc.com/en/connect/download/viewer/">Real VNC Viewer</a> on our home computer
+to remotely control the Raspberry Pi over the internet.</p>
+  </li>
+  <li>
+    <p>I wrote a simple <a href="https://en.m.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> shell script which
+invokes the <code class="language-plaintext highlighter-rouge">raspivid</code> program to capture a couple of minutes of video and send it to another Pi
+at our house using the <a href="https://en.m.wikipedia.org/wiki/SSH_File_Transfer_Protocol">SFTP</a> protocol.
+The bash script is invoked every hour, on the hour, between 10AM and 7PM when the aquarium
+light is on.</p>
+  </li>
+  <li>
+    <p>Our home Raspberry Pi receives the video each hour and, after the 7PM video arrives, another
+bash script on that device combines all of the daily videos into one video which is ready to watch
+at our leisure.</p>
+  </li>
+</ul>
+
+<h2 id="putting-it-all-together">Putting it all together…</h2>
+
+<p>After a few iterations of tweaking the bash scripts and adjusting the positioning of the camera,
+we were very pleased with the end result. We are able to check-in on the daily activities of the
+fish to make sure they are healthy, the water level is correct, and the food is being dispensed
+properly.</p>
+
+<p>Click <a href="https://youtu.be/IS_rwr9qUGo">here</a> to watch a recent video of the aquarium.</p>
+
+<p><img src="/assets/images/pi-aquarium-monitor.jpg" alt="Raspberry Pi Aquarium Monitor" />
+<strong>Raspberry Pi Aquarium Monitor</strong></p>
+
+<p><img src="/assets/images/pi-camera.jpg" alt="Raspberry Pi Camera" />
+<strong>Close up of the Pi Camera</strong></p>
+
+<h2 id="geeky-details">Geeky Details</h2>
+
+<p>If you have read this far and want more details, this section is for you. Otherwise, feel free
+to stop reading!</p>
+
+<h3 id="bash-script-on-the-remote-raspberry-pi">Bash script on the remote Raspberry Pi</h3>
+
+<p>I used the following bash script for the video recording on the remote Raspberry Pi.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nv">filename</span><span class="o">=</span><span class="s2">"aquarium-"</span><span class="sb">`</span><span class="nb">date</span> +%b-%d-%H-%M<span class="sb">`</span>
+raspivid <span class="nt">-o</span> ~/Aquarium/<span class="nv">$filename</span>.h264 <span class="nt">-t</span> 120000 <span class="nt">-drc</span> med <span class="nt">-ISO</span> 160 <span class="nt">-fps</span> 20 <span class="nt">-a</span> 1036
+
+sftp pi@my-home-pi.my-dynamic-dns-provider.com&lt; <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+lcd ~/Aquarium/
+cd /mnt/samba/Backups/Aquarium/
+#put </span><span class="nv">$filename</span><span class="sh">.mp4
+put </span><span class="nv">$filename</span><span class="sh">.h264
+quit
+</span><span class="no">EOF
+
+</span><span class="nb">rm</span> ~/Aquarium/<span class="nv">$filename</span>.h264
+
+<span class="nv">SFTP_RETURN_CODE</span><span class="o">=</span><span class="k">${</span><span class="p">?</span><span class="k">}</span>
+
+<span class="c"># If the return code is non-zero then the upload was not successful</span>
+<span class="k">if</span> <span class="o">[[</span> 0 <span class="o">!=</span> <span class="k">${</span><span class="nv">SFTP_RETURN_CODE</span><span class="k">}</span> <span class="o">]]</span>
+   <span class="k">then
+   </span><span class="nb">echo</span> <span class="s2">"upload failed"</span>
+   <span class="nb">exit</span> <span class="k">${</span><span class="nv">SFTP_RETURN_CODE</span><span class="k">}</span>
+<span class="k">else
+   </span><span class="nb">echo</span> <span class="s2">"upload successful"</span>
+<span class="k">fi
+
+</span><span class="nb">exit </span>0
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">raspivid -o ~/Aquarium/$filename.h264 -t 120000 -drc med -ISO 160 -fps 20 -a 1036</code> command
+invokes the <code class="language-plaintext highlighter-rouge">raspivid</code> program for 120000 milliseconds (2 minutes) and saves the output the
+specified file name. I am using <code class="language-plaintext highlighter-rouge">-fps 20</code> to limit the frames per second to 20 (which I found was
+acceptable and reducd the file size).  The <code class="language-plaintext highlighter-rouge">-ISO 160</code> was another tweak to prevent parts of the
+video from being overexposed. Finally, the <code class="language-plaintext highlighter-rouge">-a 1036</code> is a way to add the time and date on the video.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">sftp</code> command shown does not have my <strong>actual</strong> IP address. I have added the SSH public
+key for the remote Raspberry Pi to the <code class="language-plaintext highlighter-rouge">~/.ssh/authorized_keys</code> file on the home Raspberry Pi.
+That way the remote Pi can send the files without sending the password (since the SSH keys are
+used for authentication).</p>
+  </li>
+</ul>
+
+<h3 id="bash-script-on-the-home-raspberry-pi">Bash script on the home Raspberry Pi</h3>
+
+<p>The home Raspberry Pi is responsible for combining all of the recorded videos from the day into
+a single video which makes it easier to review.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">cd</span> /mnt/samba/Backups/Aquarium
+<span class="nv">filename</span><span class="o">=</span><span class="s2">"aquarium-"</span><span class="sb">`</span><span class="nb">date</span> +%b-%d<span class="sb">`</span>
+MP4Box <span class="si">$(</span><span class="k">for </span>file <span class="k">in </span>aquarium<span class="k">*</span>h264<span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="nt">-cat</span> <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span><span class="si">)</span> <span class="nv">$filename</span>.mp4
+<span class="nb">rm</span> <span class="k">*</span>.h264
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">MP4Box</code> program is used to combine all files from the day (which are named starting with
+<code class="language-plaintext highlighter-rouge">aquarium</code> and with the extension <code class="language-plaintext highlighter-rouge">.h264</code>) into a new file in MP4 format.</p>
+  </li>
+  <li>
+    <p>After processing the files, remove the hourly <code class="language-plaintext highlighter-rouge">.h264</code> videos.</p>
+  </li>
+</ul>
+
+<h3 id="cron-jobs">cron jobs</h3>
+
+<p>The bash scripts are invoked through <code class="language-plaintext highlighter-rouge">cron</code> jobs which are created using the <code class="language-plaintext highlighter-rouge">crontab -e</code> command
+and using an editor to add scripts which will be invoked at certain times.  The important lines
+are shown here:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># m h  dom mon dow   command
+0 10 * * * /home/pi/Scripts/camera.sh
+0 11 * * * /home/pi/Scripts/camera-3min.sh
+0 12 * * * /home/pi/Scripts/camera.sh
+0 13 * * * /home/pi/Scripts/camera.sh
+0 14 * * * /home/pi/Scripts/camera.sh
+0 15 * * * /home/pi/Scripts/camera.sh
+0 16 * * * /home/pi/Scripts/camera.sh
+0 17 * * * /home/pi/Scripts/camera.sh
+0 18 * * * /home/pi/Scripts/camera-3min.sh
+0 19 * * * /home/pi/Scripts/camera.sh
+</code></pre></div></div>
+<p><strong>crontab settings for remote Raspberry Pi</strong></p>
+
+<ul>
+  <li>
+    <p>The time is specified using minutes (first number), hour (second number), day of the month, month
+number, and day of the week. An asterisk <code class="language-plaintext highlighter-rouge">*</code> is used to indicate ‘any’.</p>
+  </li>
+  <li>
+    <p>In the example above, the script <code class="language-plaintext highlighter-rouge">camera.sh</code> is executed at 10AM, 12PM, 1PM, 2PM, 3PM, 4PM, 5PM,
+and 7PM, while the <code class="language-plaintext highlighter-rouge">camera-3min.sh</code> is invoked at 11AM and 6PM (which happens to be our feeding
+times).</p>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#family" class="page__taxonomy-item" rel="tag">Family</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#linux" class="page__taxonomy-item" rel="tag">Linux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#raspberry-pi" class="page__taxonomy-item" rel="tag">Raspberry Pi</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-05-22T00:00:00-05:00">May 22, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Raspberry+Pi+Aquarium+Monitor%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpi-aquarium-monitor%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpi-aquarium-monitor%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fpi-aquarium-monitor%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/mothers-day/" class="pagination--pager" title="Nobody eclipses my Mom!
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/mothers-day/" rel="permalink">Nobody eclipses my Mom!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Happy Mother’s Day! I apologize for the cheesy pun in this blog post title, but bear with me
+as I recall a very special trip spent with my wonderful Mom and ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/tribute-to-dad/" rel="permalink">A Tribute to My Dad
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">My Dad, Gene Paul Sturm, Jr., of Bartlesville, OK passed away on March 2, 2020 after years of
+struggle against Alzheimer’s Disease. Below is a tribute to my ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/christmas-presense/" rel="permalink">Christmas Presence
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">One of my fondest childhood memories of Christmas has to be The Cheetah.  No, I am not talking
+about the fastest of all land mammals.  For those of you who w...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/parable-of-the-comet/" rel="permalink">Parable of the Comet
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I have a confession - I am an astronomy geek.  That may not be much of a surprise to those of you
+who have seen my 8 inch telescope or watched my excitement ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Mike's Musings. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

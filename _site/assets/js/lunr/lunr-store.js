@@ -22,4 +22,10 @@ var store = [{
         "tags": ["Astronomy","Eclipse","Family","Mom"],
         "url": "http://localhost:4000/blog/mothers-day/",
         "teaser": null
+      },{
+        "title": "Raspberry Pi Aquarium Monitor",
+        "excerpt":"Before we get started, I can anticipate many of your questions about this blog post already. “Why do you have a typo in your blog title?” “What does a delicious fruit dessert have to do with aquariums?” If you don’t have a computer geek in your life, you may not...","categories": ["Blog"],
+        "tags": ["Raspberry Pi","Linux","Family"],
+        "url": "http://localhost:4000/blog/pi-aquarium-monitor/",
+        "teaser": null
       }]
