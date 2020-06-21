@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Remembering summers with Dad",
-        "excerpt":"For my brother Mark and I, this is our first Father’s Day without Dad, who passed away in March. Over the course of many years Alzheimer’s Disease slowly robbed our family of Dad’s full presence. At first it slightly diminished his exceptional intellect, giving the rest of us a fighting...","categories": ["Blog"],
+        "excerpt":"For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March. Over the course of many years Alzheimer’s Disease slowly robbed our family of Dad’s full presence. At first it slightly diminished his exceptional intellect, giving the rest of us a fighting...","categories": ["Blog"],
         "tags": ["Astronomy","Golf","Gardening","Family","Sports","Summer","Dad"],
         "url": "http://localhost:4000/blog/fathers-day/",
         "teaser": null
