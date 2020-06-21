@@ -12,7 +12,7 @@ tags:
   - Dad
 ---
 
-For my brother Mark and I, this is our first Father's Day without Dad, who passed away in March.
+For my brother Mark and me, this is our first Father's Day without Dad, who passed away in March.
 Over the course of many years Alzheimer's Disease slowly robbed our family of Dad's full presence.
 At first it slightly diminished his exceptional intellect, giving the rest of us a fighting chance
 to win an occasional round of Liverpool Rummy. As it progressed, this horrible illness stole his
