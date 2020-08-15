@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -73,6 +73,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <!--[if IE]>
   <style>
@@ -286,15 +287,26 @@
           <h1 id="page-title" class="page__title" itemprop="headline">Raspberry Pi Aquarium Monitor
 </h1>
           
-            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+  <p class="page__meta">
 
+    
 
-  7 minute read
+    
 
-</p>
-          
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        7 minute read
+      
+    
+
+  </p>
+
         </header>
       
 
@@ -304,14 +316,12 @@
 
 <blockquote>
   <p>“Why do you have a typo in your blog title?”</p>
-</blockquote>
 
-<blockquote>
   <p>“What does a delicious fruit dessert have to do with aquariums?”</p>
 </blockquote>
 
 <p>If you don’t have a computer geek in your life, you may not realize that a <strong>raspberry pie</strong> is
-quite different from a <strong>Raspberry Pi</strong>.  The latter is a low-cost, single-board computer
+quite different from a <strong>Raspberry Pi</strong>. The latter is a low-cost, single-board computer
 created by the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a>, a non-profit
 organization based in the UK that brings the power of computing to students and hobbyists
 around the world. The “Pi” in the title not only suggests the pi symbol from mathematics but also
@@ -328,7 +338,7 @@ tinkering around and learning how to program using our
 Stillwater, purchased a 20-gallon aquarium and stocked it with several freshwater fish.
 Establishing a new aquarium can be a painful process, and he lost several fish during the first
 few weeks until the beneficial bacteria started breaking down the waste. By the beginning
-of March the aquarium had reached a “stable” state – right in time for his planned trip back home
+of March, the aquarium had reached a “stable” state – right in time for his planned trip back home
 to visit us during Spring Break.</p>
 
 <p>That is when the world changed. What started out as a week-long visit to Edmond turned into weeks of
@@ -342,7 +352,7 @@ keep an eye on his tank while he was home with us in lockdown.</p>
 
 <p>The Raspberry Pi is one of those devices that you <strong>know</strong> you want, but you may not have a
 concrete <strong>reason</strong> to buy. Sure, its purchase can be justified for educational and entertainment
-uses, but can it do <strong>useful</strong> things?  Yes! Faced with the aquarium dilemma, I quickly knew how
+uses, but can it do <strong>useful</strong> things? Yes! Faced with the aquarium dilemma, I quickly knew how
 my Raspberry Pi Zero W would be put to use for the next several weeks.</p>
 
 <p><img src="/assets/images/pizerow.jpg" alt="Raspberry Pi Zero W" />
@@ -356,14 +366,14 @@ Raspberry Pi vendors.</p>
   <li>
     <p>A <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a>
 single-board computer is the centerpiece of the aquarium monitor. Although it sells by
-itself for only USD $10, it requires some additional components such as a power supply
-and micro SD card to store the operating system. For my project I used the
+itself for only $10, it requires some additional components such as a power supply
+and micro SD card to store the operating system. For my project, I used the
 <a href="https://www.amazon.com/Vilros-Raspberry-Starter-Power-Premium/dp/B0748MPQT4/">Viros Raspberry Pi Zero W Kit</a>
 ($29) along with a
 <a href="https://www.amazon.com/gp/product/B012PLSCQ0">Lexar 633x 32GB micro SD card</a> ($6).</p>
   </li>
   <li>
-    <p>Recording images and videos of the fish requires a camera module, and for this project I used the
+    <p>Recording images and videos of the fish requires a camera module, and for this project, I used the
 <a href="https://www.raspberrypi.org/products/camera-module-v2/">Raspberry Pi Camera Module v2</a>,
 which sells for $28 on
 <a href="https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS">Amazon</a>.
@@ -372,11 +382,11 @@ case included in the kit.</p>
   </li>
   <li>
     <p>We purchased an inexpensive, timer-based <a href="https://www.amazon.com/gp/product/B07VCKRFGY/">fish feeder</a>
-which automatically dispenses flaked fish food twice per day at 10AM and 6PM.</p>
+which automatically dispenses flaked fish food twice per day at 10 a.m. and 6 p.m.</p>
   </li>
   <li>
     <p>The aquarium light is connected to a <a href="https://www.wemo.com/">WeMo</a> smart plug, and it is
-programmed to turn on at 10AM and off at 8PM daily.</p>
+programmed to turn on at 10 a.m. and off at 8 p.m. daily.</p>
   </li>
   <li>
     <p>The Pi is mounted to one of my spare tripods so that the entire aquarium is visible in the
@@ -387,10 +397,10 @@ camera’s field of view.</p>
 <h2 id="software-runs-the-show">Software runs the show…</h2>
 
 <ul>
-  <li>The Pi Zero W runs an optimized version of the free and open source
+  <li>The Pi Zero W runs an optimized version of the free and open-source
 <a href="https://en.m.wikipedia.org/wiki/Linux">Linux</a> operating system called
 <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>. Raspbian is similar to Windows and
-MacOS in that it can run programs and handles interfacing to the computer hardware.</li>
+macOS in that it can run programs and handles interfacing with the computer hardware.</li>
 </ul>
 
 <p><img src="/assets/images/raspbian-desktop.png" alt="Raspbian Desktop" />
@@ -398,7 +408,7 @@ MacOS in that it can run programs and handles interfacing to the computer hardwa
 
 <ul>
   <li>
-    <p>I needed to be able to access the Raspberry Pi from our house over the internet in order to make
+    <p>I needed to be able to access the Raspberry Pi from our house over the internet to make
 adjustments to the camera settings and video schedule from our house. To do this, I used the
 Real VNC server (included with Raspbian) running on the remote Raspberry Pi and the
 <a href="https://www.realvnc.com/en/connect/download/viewer/">Real VNC Viewer</a> on our home computer
@@ -408,11 +418,11 @@ to remotely control the Raspberry Pi over the internet.</p>
     <p>I wrote a simple <a href="https://en.m.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> shell script which
 invokes the <code class="language-plaintext highlighter-rouge">raspivid</code> program to capture a couple of minutes of video and send it to another Pi
 at our house using the <a href="https://en.m.wikipedia.org/wiki/SSH_File_Transfer_Protocol">SFTP</a> protocol.
-The bash script is invoked every hour, on the hour, between 10AM and 7PM when the aquarium
+The bash script is invoked every hour, on the hour, between 10 a.m. and 7 p.m. when the aquarium
 light is on.</p>
   </li>
   <li>
-    <p>Our home Raspberry Pi receives the video each hour and, after the 7PM video arrives, another
+    <p>Our home Raspberry Pi receives the video each hour and, after the 7 p.m. video arrives, another
 bash script on that device combines all of the daily videos into one video which is ready to watch
 at our leisure.</p>
   </li>
@@ -421,7 +431,7 @@ at our leisure.</p>
 <h2 id="putting-it-all-together">Putting it all together…</h2>
 
 <p>After a few iterations of tweaking the bash scripts and adjusting the positioning of the camera,
-we were very pleased with the end result. We are able to check-in on the daily activities of the
+we were very pleased with the end result. We can check-in on the daily activities of the
 fish to make sure they are healthy, the water level is correct, and the food is being dispensed
 properly.</p>
 
@@ -476,7 +486,7 @@ quit
     <p>The <code class="language-plaintext highlighter-rouge">raspivid -o ~/Aquarium/$filename.h264 -t 120000 -drc med -ISO 160 -fps 20 -a 1036</code> command
 invokes the <code class="language-plaintext highlighter-rouge">raspivid</code> program for 120000 milliseconds (2 minutes) and saves the output the
 specified file name. I am using <code class="language-plaintext highlighter-rouge">-fps 20</code> to limit the frames per second to 20 (which I found was
-acceptable and reducd the file size).  The <code class="language-plaintext highlighter-rouge">-ISO 160</code> was another tweak to prevent parts of the
+acceptable and reduced the file size). The <code class="language-plaintext highlighter-rouge">-ISO 160</code> was another tweak to prevent parts of the
 video from being overexposed. Finally, the <code class="language-plaintext highlighter-rouge">-a 1036</code> is a way to add the time and date on the video.</p>
   </li>
   <li>
@@ -512,21 +522,22 @@ MP4Box <span class="si">$(</span><span class="k">for </span>file <span class="k"
 <h3 id="cron-jobs">cron jobs</h3>
 
 <p>The bash scripts are invoked through <code class="language-plaintext highlighter-rouge">cron</code> jobs which are created using the <code class="language-plaintext highlighter-rouge">crontab -e</code> command
-and using an editor to add scripts which will be invoked at certain times.  The important lines
+and using an editor to add scripts which will be invoked at certain times. The important lines
 are shown here:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># m h  dom mon dow   command
-0 10 * * * /home/pi/Scripts/camera.sh
-0 11 * * * /home/pi/Scripts/camera-3min.sh
-0 12 * * * /home/pi/Scripts/camera.sh
-0 13 * * * /home/pi/Scripts/camera.sh
-0 14 * * * /home/pi/Scripts/camera.sh
-0 15 * * * /home/pi/Scripts/camera.sh
-0 16 * * * /home/pi/Scripts/camera.sh
-0 17 * * * /home/pi/Scripts/camera.sh
-0 18 * * * /home/pi/Scripts/camera-3min.sh
-0 19 * * * /home/pi/Scripts/camera.sh
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># m h  dom mon dow   command</span>
+0 10 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 11 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera-3min.sh
+0 12 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 13 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 14 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 15 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 16 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 17 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
+0 18 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera-3min.sh
+0 19 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/pi/Scripts/camera.sh
 </code></pre></div></div>
+
 <p><strong>crontab settings for remote Raspberry Pi</strong></p>
 
 <ul>
@@ -535,9 +546,9 @@ are shown here:</p>
 number, and day of the week. An asterisk <code class="language-plaintext highlighter-rouge">*</code> is used to indicate ‘any’.</p>
   </li>
   <li>
-    <p>In the example above, the script <code class="language-plaintext highlighter-rouge">camera.sh</code> is executed at 10AM, 12PM, 1PM, 2PM, 3PM, 4PM, 5PM,
-and 7PM, while the <code class="language-plaintext highlighter-rouge">camera-3min.sh</code> is invoked at 11AM and 6PM (which happens to be our feeding
-times).</p>
+    <p>In the example above, the script <code class="language-plaintext highlighter-rouge">camera.sh</code> is executed at 10 a.m., 12 p.m., 1 p.m., 2 p.m.,
+3 p.m., 4 p.m., 5 p.m., and 7 p.m., while the <code class="language-plaintext highlighter-rouge">camera-3min.sh</code> is invoked at 11 a.m. and 6 p.m.
+(which happens to be our feeding times).</p>
   </li>
 </ul>
 
@@ -642,24 +653,35 @@ times).</p>
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/fathers-day/" rel="permalink">Remembering summers with Dad
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+  <p class="page__meta">
 
-
-  5 minute read
-
-</p>
     
+
+    
+
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        5 minute read
+      
+    
+
+  </p>
+
     <p class="archive__item-excerpt" itemprop="description">For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March.
-Over the course of many years Alzheimer’s Disease slowly ro...</p>
+For many years, Alzheimer’s Disease slowly robbed our famil...</p>
   </article>
 </div>
 
@@ -671,22 +693,33 @@ Over the course of many years Alzheimer’s Disease slowly ro...</p>
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/mothers-day/" rel="permalink">Nobody eclipses my Mom!
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+  <p class="page__meta">
 
-
-  3 minute read
-
-</p>
     
+
+    
+
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        3 minute read
+      
+    
+
+  </p>
+
     <p class="archive__item-excerpt" itemprop="description">Happy Mother’s Day! I apologize for the cheesy pun in this blog post title, but bear with me
 as I recall a very special trip spent with my wonderful Mom and ...</p>
   </article>
@@ -700,22 +733,33 @@ as I recall a very special trip spent with my wonderful Mom and ...</p>
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/tribute-to-dad/" rel="permalink">A Tribute to My Dad
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+  <p class="page__meta">
 
-
-  1 minute read
-
-</p>
     
+
+    
+
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        1 minute read
+      
+    
+
+  </p>
+
     <p class="archive__item-excerpt" itemprop="description">My Dad, Gene Paul Sturm, Jr., of Bartlesville, OK passed away on March 2, 2020 after years of
 struggle against Alzheimer’s Disease. Below is a tribute to my ...</p>
   </article>
@@ -729,22 +773,33 @@ struggle against Alzheimer’s Disease. Below is a tribute to my ...</p>
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/blog/christmas-presense/" rel="permalink">Christmas Presence
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
+  <p class="page__meta">
 
-
-  5 minute read
-
-</p>
     
+
+    
+
+    
+      
+      
+
+      <i class="far fa-clock" aria-hidden="true"></i>
+      
+        5 minute read
+      
+    
+
+  </p>
+
     <p class="archive__item-excerpt" itemprop="description">One of my fondest childhood memories of Christmas has to be The Cheetah.  No, I am not talking
 about the fastest of all land mammals.  For those of you who w...</p>
   </article>
@@ -808,7 +863,6 @@ about the fastest of all land mammals.  For those of you who w...</p>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
 
 
