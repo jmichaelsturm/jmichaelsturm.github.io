@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -62,6 +62,7 @@
 
 
 
+
 <!-- end _includes/seo.html -->
 
 
@@ -78,22 +79,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
-<!--[if IE]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
 
 
     <!-- start custom head snippets -->
@@ -106,17 +94,12 @@
 
   <body class="layout--single">
     <nav class="skip-links">
-  <h2 class="screen-reader-text">Skip links</h2>
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
     <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
 </nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
 
     
 
@@ -141,9 +124,7 @@
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
-          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
-            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
-          </svg>
+          <i class="fas fa-search"></i>
         </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -162,28 +143,30 @@
 
 
 
+
+
 <div id="main" role="main">
   
   <div class="sidebar sticky">
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
     <div class="author__avatar">
-      
-        <img src="/assets/images/mike.jpg" alt="Mike Sturm" itemprop="image">
-      
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/mike.jpg" alt="Mike Sturm" itemprop="image" class="u-photo">
+      </a>
     </div>
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Mike Sturm</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Mike Sturm</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio p-note" itemprop="description">
         <p>Husband, father, firmware engineer, and all around <em><strong>geek</strong></em> from Edmond, Oklahoma.</p>
 
       </div>
@@ -198,19 +181,19 @@
       
         
           
-            <li><a href="https://jmichaelsturm.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+            <li><a href="https://jmichaelsturm.github.io" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
           
         
           
-            <li><a href="https://twitter.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+            <li><a href="https://twitter.com/jmichaelsturm" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
           
         
           
-            <li><a href="https://github.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+            <li><a href="https://github.com/jmichaelsturm" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
           
         
           
-            <li><a href="https://instagram.com/jmichaelsturm" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+            <li><a href="https://instagram.com/jmichaelsturm" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
           
         
       
@@ -265,7 +248,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -279,7 +262,7 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Remembering summers with Dad">
     <meta itemprop="description" content="For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March.For many years, Alzheimer’s Disease slowly robbed our family of Dad’s full presence.At first, it slightly diminished his exceptional intellect, giving the rest of us a fighting chanceto win an occasional round of Liverpool Rummy. As it progressed, this horrible illness stole hiswords and deprived him of the ability to recount humorous stories from his childhood and verbalexpressions of his love for us. Ultimately it claimed his life, long before it should have ended.">
     <meta itemprop="datePublished" content="2020-06-21T00:00:00-05:00">
@@ -288,8 +271,10 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Remembering summers with Dad
-</h1>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/blog/fathers-day/" class="u-url" itemprop="url">Remembering summers with Dad
+</a>
+          </h1>
           
 
   <p class="page__meta">
@@ -314,7 +299,7 @@
         </header>
       
 
-      <section class="page__content" itemprop="text">
+      <section class="page__content e-content" itemprop="text">
         
         <p>For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March.
 For many years, Alzheimer’s Disease slowly robbed our family of Dad’s full presence.
@@ -440,19 +425,19 @@ problems and injustices that impact our world. Dad’s values continue to shape 
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#astronomy" class="page__taxonomy-item" rel="tag">Astronomy</a><span class="sep">, </span>
+      <a href="/tags/#astronomy" class="page__taxonomy-item p-category" rel="tag">Astronomy</a><span class="sep">, </span>
     
-      <a href="/tags/#dad" class="page__taxonomy-item" rel="tag">Dad</a><span class="sep">, </span>
+      <a href="/tags/#dad" class="page__taxonomy-item p-category" rel="tag">Dad</a><span class="sep">, </span>
     
-      <a href="/tags/#family" class="page__taxonomy-item" rel="tag">Family</a><span class="sep">, </span>
+      <a href="/tags/#family" class="page__taxonomy-item p-category" rel="tag">Family</a><span class="sep">, </span>
     
-      <a href="/tags/#gardening" class="page__taxonomy-item" rel="tag">Gardening</a><span class="sep">, </span>
+      <a href="/tags/#gardening" class="page__taxonomy-item p-category" rel="tag">Gardening</a><span class="sep">, </span>
     
-      <a href="/tags/#golf" class="page__taxonomy-item" rel="tag">Golf</a><span class="sep">, </span>
+      <a href="/tags/#golf" class="page__taxonomy-item p-category" rel="tag">Golf</a><span class="sep">, </span>
     
-      <a href="/tags/#sports" class="page__taxonomy-item" rel="tag">Sports</a><span class="sep">, </span>
+      <a href="/tags/#sports" class="page__taxonomy-item p-category" rel="tag">Sports</a><span class="sep">, </span>
     
-      <a href="/tags/#summer" class="page__taxonomy-item" rel="tag">Summer</a>
+      <a href="/tags/#summer" class="page__taxonomy-item p-category" rel="tag">Summer</a>
     
     </span>
   </p>
@@ -469,15 +454,15 @@ problems and injustices that impact our world. Dad’s values continue to shape 
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#blog" class="page__taxonomy-item" rel="tag">Blog</a>
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
     
     </span>
   </p>
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-06-21T00:00:00-05:00">June 21, 2020</time></p>
 
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-06-21T00:00:00-05:00">June 21, 2020</time></p>
 
       </footer>
 
@@ -511,7 +496,7 @@ problems and injustices that impact our world. Dad’s values continue to shape 
   
   
     <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
         
           
@@ -685,7 +670,7 @@ about the fastest of all land mammals.  For those of you who w...</p>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
@@ -727,7 +712,7 @@ about the fastest of all land mammals.  For those of you who w...</p>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 Mike's Musings. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2022 Mike's Musings. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
