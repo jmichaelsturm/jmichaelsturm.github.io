@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-13T21:35:48-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mike’s Musings</title><subtitle>Personal website for Mike Sturm, a firmware engineer from Edmond, Oklahoma.</subtitle><author><name>Mike Sturm</name></author><entry><title type="html">Remembering summers with Dad</title><link href="http://localhost:4000/blog/fathers-day/" rel="alternate" type="text/html" title="Remembering summers with Dad" /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>http://localhost:4000/blog/fathers-day</id><content type="html" xml:base="http://localhost:4000/blog/fathers-day/">&lt;p&gt;For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-22T23:24:51-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mike’s Musings</title><subtitle>Personal website for Mike Sturm, a firmware engineer from Edmond, Oklahoma.</subtitle><author><name>Mike Sturm</name></author><entry><title type="html">Book Review - A Fire Upon the Deep</title><link href="http://localhost:4000/blog/book-review-fire-upon-the-deep/" rel="alternate" type="text/html" title="Book Review - A Fire Upon the Deep" /><published>2022-11-22T00:00:00-06:00</published><updated>2022-11-22T00:00:00-06:00</updated><id>http://localhost:4000/blog/book-review-fire-upon-the-deep</id><content type="html" xml:base="http://localhost:4000/blog/book-review-fire-upon-the-deep/">&lt;p&gt;As a fan of near-future, hard science fiction, I usually seek books grounded in science and
+centered on human space exploration. I especially enjoy the “first contact” subgenre that
+imagines humanity’s first contact with extraterrestrial beings.&lt;/p&gt;
+
+&lt;p&gt;Vernor Vinge’s 1992 book, &lt;em&gt;A Fire Upon the Deep&lt;/em&gt; is neither focused on hard science nor centered
+on human exploration. Instead, it is a grand, far-future space opera on a galactic scale.  Even
+though the book is not “hard science fiction”, I was delighted to find a mixture of unique ideas, interesting characters, and exciting plot.&lt;/p&gt;
+
+&lt;h2 id=&quot;storytelling---rating-5--5&quot;&gt;Storytelling - Rating 5 / 5&lt;/h2&gt;
+
+&lt;p&gt;Set in the Milky Way galaxy in the far future, humanity has explored and colonized much of the
+galaxy and has encountered many intelligent civilizations. When a colony of human scientists
+accidentally unleashes a latent super-intelligence “Blight” that threatens to destroy civilizations
+throughout the galaxy, a family of scientists escapes with critical information to stop the Blight,
+crash-landing on a distant, medieval planet inhabited by dog-like creatures called the “Tines” -
+who kill the parents and capture the two surviving children.&lt;/p&gt;
+
+&lt;p&gt;Vinge masterfully intertwines two parallel storylines that converge in a satisfying conclusion.
+The first storyline describes the plight of the stranded children who were used as pawns in a war
+between two factions. A second storyline follows a small team of humans and sentient plant-like
+creatures called Skroderiders who learn about the stranded children through the wrecked ship’s
+distress signals and mount a rescue mission to save them from the Tines and the galaxy from the
+Blight.&lt;/p&gt;
+
+&lt;h2 id=&quot;ideas---rating-5--5&quot;&gt;Ideas - Rating 5 / 5&lt;/h2&gt;
+
+&lt;p&gt;I was pleasantly surprised with the depth of interesting aliens in &lt;em&gt;A Fire Upon the Deep&lt;/em&gt;. The Tines
+species, with pack intelligence, were unlike the typical alien creatures found in many science
+fiction books. In fact, much of the narrative is told from the perspective of the Tines creatures.
+It is an upside-down “first contact” story in which the humans are the aliens landing on a
+primitive world. It is interesting how the Tines creatures use data from the human ship to
+develop primitive technology such as guns and radio.&lt;/p&gt;
+
+&lt;p&gt;Another prominent alien species is the Skroderider, a sentient plant-like creature which relies on
+“skrode” machinery for mobility and memory. The ancient Skroderider creatures are portrayed as
+amiable traders in the galaxy and loyal friends to the humans.&lt;/p&gt;
+
+&lt;h2 id=&quot;characters---rating-4--5&quot;&gt;Characters - Rating 4 / 5&lt;/h2&gt;
+
+&lt;p&gt;Although some of the characters are not deeply developed, readers are treated to many interesting
+characters who are central to the plot. The characters in the Tines world are the most interesting.
+Each “person” is a collection of several of the dog-like creatures, joined together by a collective
+pack mind. Vinge excels at developing the Tines characters, especially the queen of the Tines,
+“Woodcarver.”&lt;/p&gt;
+
+&lt;p&gt;Other interesting characters include the Skroderiders, Blueshell and Greenstalk - although I
+wish each of these characters were developed more completely. Of the human characters, Pham Nuwen
+and Ravna Bergsndot (on the rescue ship) and Johanna Olsndot (one of the children) were the most
+interesting, but again I wish for more depth.&lt;/p&gt;
+
+&lt;h2 id=&quot;science-and-technology---rating-3--5&quot;&gt;Science and Technology - Rating 3 / 5&lt;/h2&gt;
+
+&lt;p&gt;In this book, science and technology served mostly as a literary backdrop for the narrative.&lt;/p&gt;
+
+&lt;p&gt;The galaxy is divided into concentric zones that define the laws of physics and level of possible
+technology. The “slow zone” is close to the galactic center, and civilizations in this zone are
+unable to advance their civilizations and spacefaring technologies beyond rudimentary levels.
+The next zone is “beyond” in which faster-than-light travel and advanced technology is possible.
+In the outer reaches of the galaxy, the “transcend” is occupied by super-intelligent powers and
+artificial intelligences who are not concerned with the beings below. While the concept of galactic
+zones is an interesting literary device, it seems implausible to me that the laws of physics would
+vary by location within the galaxy.&lt;/p&gt;
+
+&lt;p&gt;Vinge also introduces an interesting galactic network, but the text-based bulletin board
+communication within the galaxy seems dated to the technologies of the 1990s.  However, it is quite
+interesting how Vinge portrays the vast network’s potential for good (spreading warnings about the
+Blight) and evil (spreading misinformation about humans being agents of the Blight). The nickname
+given to the network, “Net of a Million Lies”, seems quite appropriate in today’s climate of crazy
+internet conspiracy theories.&lt;/p&gt;
+
+&lt;h2 id=&quot;overall-rating---17--20&quot;&gt;Overall Rating - 17 / 20&lt;/h2&gt;
+
+&lt;p&gt;I highly recommend this book to any science fiction fan and especially to fans of grand space
+operas with interesting ideas. Even though it did not include believable science and near-future
+human exploration, Vinge impressed me with his fascinating concepts and entertaining story.&lt;/p&gt;</content><author><name>Mike Sturm</name></author><category term="Blog" /><category term="Books" /><category term="Reviews" /><category term="SciFi" /><summary type="html">As a fan of near-future, hard science fiction, I usually seek books grounded in science and centered on human space exploration. I especially enjoy the “first contact” subgenre that imagines humanity’s first contact with extraterrestrial beings.</summary></entry><entry><title type="html">Remembering summers with Dad</title><link href="http://localhost:4000/blog/fathers-day/" rel="alternate" type="text/html" title="Remembering summers with Dad" /><published>2020-06-21T00:00:00-05:00</published><updated>2020-06-21T00:00:00-05:00</updated><id>http://localhost:4000/blog/fathers-day</id><content type="html" xml:base="http://localhost:4000/blog/fathers-day/">&lt;p&gt;For my brother Mark and me, this is our first Father’s Day without Dad, who passed away in March.
 For many years, Alzheimer’s Disease slowly robbed our family of Dad’s full presence.
 At first, it slightly diminished his exceptional intellect, giving the rest of us a fighting chance
 to win an occasional round of Liverpool Rummy. As it progressed, this horrible illness stole his

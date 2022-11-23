@@ -1,0 +1,9 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "_posts/2022-11-21-book-review-rubric.md"
+        }
+    ]
+}
