@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Book Review - A Fire Upon the Deep",
-        "excerpt":"As a fan of near-future, hard science fiction, I usually seek books grounded in science and centered on human space exploration. I especially enjoy the “first contact” subgenre that imagines humanity’s first contact with extraterrestrial beings. Vernor Vinge’s 1992 book, A Fire Upon the Deep is neither focused on hard...","categories": ["Blog"],
+        "excerpt":"As a fan of near-future, hard science fiction, I usually prefer books grounded in science and centered on human space exploration. I especially enjoy the first contact subgenre that imagines humanity’s first contact with extraterrestrial beings. Vernor Vinge’s 1992 book, A Fire Upon the Deep is neither focused on hard...","categories": ["Blog"],
         "tags": ["Books","Reviews","SciFi"],
         "url": "/blog/book-review-fire-upon-the-deep/",
         "teaser": null
